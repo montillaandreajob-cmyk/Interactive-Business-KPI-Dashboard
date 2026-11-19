@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Fictional business analytics dashboard portfolio demonstration." />
+  <title>Business KPI Dashboard | Portfolio Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <div>
+        <p class="eyebrow">Andrea Montilla / Programming portfolio</p>
+        <h1>Business performance, at a glance.</h1>
+        <p class="lede">An interactive sales analytics demonstration with synthetic data.</p>
+      </div>
+      <span class="tag">Portfolio reconstruction</span>
+    </header>
+    <main>
+      <section class="toolbar" aria-label="Filters">
+        <div class="control">
+          <label for="channel">Acquisition channel</label>
+          <select id="channel"><option value="all">All channels</option></select>
+        </div>
+        <button id="reset" type="button">Reset filters</button>
+      </section>
+      <section class="kpi-grid" aria-label="Key metrics">
+        <article class="kpi"><span>Total opportunities</span><strong id="total">0</strong></article>
+        <article class="kpi"><span>Won opportunities</span><strong id="won">0</strong></article>
+        <article class="kpi"><span>Closed win rate</span><strong id="win-rate">0%</strong></article>
+        <article class="kpi"><span>Open pipeline</span><strong id="pipeline">$0</strong></article>
+      </section>
+      <section class="two-col">
+        <article class="panel">
+          <h2>Opportunity stages</h2>
+          <p class="hint">Count of records in each current stage.</p>
+          <div id="stage-bars" aria-label="Opportunity stage chart"></div>
+        </article>
+        <article class="panel">
+          <h2>What this project demonstrates</h2>
+          <p>Aggregating client-side data, filtering records, calculating business KPIs and updating a responsive interface without a framework.</p>
+          <p class="note">All figures and opportunities shown are fabricated examples. No employer or client data is included.</p>
+        </article>
+      </section>
+      <section class="panel">
+        <h2>Example opportunity list</h2>
+        <div class="table-wrap">
+          <table><thead><tr><th scope="col">Opportunity</th><th scope="col">Channel</th><th scope="col">Stage</th><th scope="col">Estimated value</th></tr></thead>
+            <tbody id="records"></tbody></table>
+        </div>
+      </section>
+    </main>
+    <footer>Independent demo · fictional data · HTML / CSS / JavaScript</footer>
+  </div>
+</body>
+</html>
